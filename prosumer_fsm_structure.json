@@ -1,0 +1,26 @@
+{
+    "name": "prosumer",
+    "initial_state": "start",
+    "states": [
+        "start",
+        "rain",
+        "sun"
+    ],
+    "transitions": [
+        {
+            "source": "start",
+            "target": "rain",
+            "condition": "temperature>5"
+        },
+        {
+            "source": "rain",
+            "target": "sun",
+            "condition": "temperature==3"
+        },
+        {
+            "source": "sun",
+            "target": "rain",
+            "condition": "temperature>20"
+        }
+    ]
+}
